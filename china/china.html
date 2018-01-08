@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/ico" href="../favicon.ico">
+    <link rel="stylesheet" href="china.css">
+    <title>China Population</title>
+  </head>
+  <body>
+    <div class="china-map">
+      <div class="mouse-info"><span class="mouse-title"></span></div>
+      <div class="main-heading">
+        <span class="main-heading__heading">China Population Data Visualization</span>
+        <button type="button" name="button" class="selection-map">Selection Map</button>
+        <button type="button" name="button" class="population-map">Population Map</button>
+        <a href="../index.html">Home</a>
+      </div>
+      <div class="description">
+        The darker the color of the administrative division, the more populated it is.
+      </div>
+      <div class="map">
+        <div class="info">
+          <input class="map-search" type="text" name="" value="" placeholder="Search by Name">
+          <div class="english-name"><span class="title"></span><span class="data"></span></div>
+          <div class="pinyin"><span class="title"></span><span class="data"></span></div>
+          <div class="simplified-chinese"><span class="title"></span><span class="data"></span></div>
+          <div class="english-capital-city"><span class="title"></span><span class="data"></span></div>
+          <div class="population"><span class="title"></span><span class="data"></span></div>
+        </div>
+        <div class="map__container">
+          <div class="root"></div>
+        </div>
+      </div>
+    </div>
+    <div class="china-population">
+      <div class="graphs">
+        <svg class="chart" width="960" height="500"></svg>
+      </div>
+    </div>
+    <script src="../d3.min.js"></script>
+    <script src="china.js"></script>
+  </body>
+</html>

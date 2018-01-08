@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(249, 251, 251);
+}
+
+.main-heading {
+  padding: 10px 20px;
+}
+
+.main-heading__heading {
+  font-size: 40px;
+}
+
+
+.description {
+  padding: 0 20px 10px 20px;
+}
+
+.map {
+  display: block;
+  width: 100%;
+}
+
+.map__container {
+  display: block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.root {
+  position: relative;
+  height: 700px;
+}
+
+.map svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+path:hover {
+  fill: #4682b4;
+  cursor: pointer;
+  fill-opacity: 1;
+}
+
+/* path[data-english-name="Central"] {
+  fill: #cc3333;
+} */
+
+path[data-english-name="Central"]:hover {
+  fill: #4682b4;
+  cursor: pointer;
+  fill-opacity: 1;
+}
+
+.info {
+  display: block;
+  width: 50%;
+  vertical-align: top;
+  padding: 0px 20px;
+}
+
+.map-search {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.english-name {
+  font-size: 20px;
+}
+
+.pinyin {
+  font-size: 20px;
+}
+
+.simplified-chinese {
+  font-size: 48px;
+}
+
+.english-capital-city {
+  font-size: 20px;
+}
+
+.population {
+  font-size: 20px;
+}
+
+.china-map {
+  position: relative;
+}
+
+.mouse-info {
+  position: absolute;
+}
+
+.mouse-title {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 10px;
+  display: none;
+}
+
+.graphs {
+  padding: 20px;
+}
