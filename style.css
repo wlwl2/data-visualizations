@@ -5,3 +5,62 @@ body {
   font-family: sans-serif;
   background-color: rgb(249, 251, 251);
 }
+
+.homepage {
+  text-align: center;
+}
+
+.homepage h1 {
+  display: inline-block;
+}
+
+.homepage nav {
+  display: inline-block;
+}
+
+.homepage nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.homepage nav ul li {
+  margin: 10px 0;
+}
+
+.homepage .website a {
+  display: inline-block;
+}
+
+.blue-button {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  border-style: outset;
+  border-width: 3px;
+  border-left-color: rgb(27, 76, 159);
+  border-top-color: rgb(27, 76, 159);
+  border-right-color: rgb(11, 31, 64);
+  border-bottom-color: rgb(11, 31, 64);
+  background-color: rgb(24, 70, 148);
+  color: rgb(251, 251, 252);
+  user-select: none;
+  text-decoration: none;
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  background-color: rgb(46, 151, 237);
+  border-left-color: rgb(46, 151, 237);
+  border-top-color: rgb(46, 151, 237);
+}
+
+.blue-button:active {
+  border-style: inset;
+  border-left-color: rgb(11, 31, 64);
+  border-top-color: rgb(11, 31, 64);
+  border-right-color: rgb(27, 76, 159);
+  border-bottom-color: rgb(27, 76, 159);
+}

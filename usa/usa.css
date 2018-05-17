@@ -1,16 +1,15 @@
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: rgb(249, 251, 251);
-}
-
 .main-heading {
   padding: 10px 20px;
 }
 
+.main-heading a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .main-heading__heading {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 40px;
 }
 
