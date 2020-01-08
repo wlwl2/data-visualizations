@@ -310,12 +310,62 @@ for (var i = 0; i < states.length; i++) {
   path.setAttribute('stroke', 'black')
   path.setAttribute('fill', 'transparent')
   path.setAttribute('data-english-name', states[i].name)
-  path.setAttribute('class', 'division-segment')
-  path.setAttribute('data-pinyin', states[i].pinyin)
-  path.setAttribute('data-simplified-chinese', states[i].simplified_chinese)
-  path.setAttribute('data-traditional-chinese', states[i].traditional_chinese)
-  path.setAttribute('data-english-capital-city', states[i].english_capital_city)
-  path.setAttribute('data-population', states[i].population)
   svg.appendChild(path)
 }
 document.querySelector('.usa-map .root').appendChild(svg)
+
+var paths = document.querySelectorAll('path')
+var englishName = document.querySelector('.english-name')
+
+function clearAllFill () {
+  for (var i = 0; i < paths.length; i++) {
+    paths[i].setAttribute('fill', 'transparent')
+  }
+}
+
+function clearAllData () {
+  englishName.textContent = ''
+}
+
+function selectDivision (division) {
+  division.setAttribute('fill', '#4682b4')
+  englishName.textContent = division.getAttribute('data-english-name')
+}
+
+var mouseInfo = document.querySelector('.mouse-info')
+
+document.body.addEventListener('mouseover', function (event) {
+  mouseInfo.firstElementChild.setAttribute('style', 'display: none;')
+}, false)
+
+for (var j = 0; j < paths.length; j++) {
+  function divisionClick (event) {
+    event.stopPropagation()
+    clearAllFill()
+    selectDivision(event.target)
+  }
+  paths[j].addEventListener('click', divisionClick, false)
+
+  paths[j].addEventListener('mouseover', function (event) {
+    event.stopPropagation()
+    mouseInfo.firstElementChild.setAttribute('style', 'display: block;')
+    mouseInfo.firstElementChild.textContent = event.target.getAttribute('data-english-name')
+    mouseInfo.style.left = String(event.pageX + 20) + 'px'
+    mouseInfo.style.top = String(event.pageY + 20) + 'px'
+  }, false)
+}
+
+var mapSearch = document.querySelector('.map-search')
+function search () {
+  var paths = document.querySelectorAll('path')
+	if (!mapSearch) return
+  mapSearch.addEventListener('input', function (event) {
+    for (var i = 0; i < paths.length; i++) {
+      if (event.target.value === paths[i].getAttribute('data-english-name')) {
+        clearAllFill()
+        selectDivision(paths[i])
+      }
+    }
+  }, false)
+}
+search()
