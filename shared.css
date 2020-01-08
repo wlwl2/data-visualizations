@@ -15,7 +15,7 @@
 
 .main-heading__heading {
   display: inline-block;
-  font-size: 40px;
+  font-size: 32px;
   vertical-align: middle;
 }
 
@@ -67,7 +67,9 @@ path[data-english-name="Central"]:hover {
   display: block;
   width: 50%;
   vertical-align: top;
-  padding: 0px 20px;
+  padding: 0 0 20px 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .map-search {
@@ -76,7 +78,7 @@ path[data-english-name="Central"]:hover {
 }
 
 .english-name {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .pinyin {

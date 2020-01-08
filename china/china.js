@@ -377,21 +377,21 @@ for (var j = 0; j < paths.length; j++) {
   }, false)
 }
 
-// var mapSearch = document.querySelector('.map-search')
-// function search () {
-//   var paths = document.querySelectorAll('path')
-//   mapSearch.addEventListener('input', function (event) {
-//     for (var i = 0; i < paths.length; i++) {
-//       if (event.target.value === paths[i].getAttribute('data-english-name') || event.target.value === paths[i].getAttribute('data-english-capital-city')) {
-//         allWhiteBackground()
-//         clearAllFill()
-//         selectDivision(paths[i])
-//       }
-//     }
-//   }, false)
-// }
-// 
-// search()
+var mapSearch = document.querySelector('.map-search')
+function search () {
+  var paths = document.querySelectorAll('path')
+  mapSearch.addEventListener('input', function (event) {
+    for (var i = 0; i < paths.length; i++) {
+      if (event.target.value === paths[i].getAttribute('data-english-name') || event.target.value === paths[i].getAttribute('data-english-capital-city')) {
+        allWhiteBackground()
+        clearAllFill()
+        selectDivision(paths[i])
+      }
+    }
+  }, false)
+}
+
+search()
 
 var fillInfo = []
 

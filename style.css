@@ -32,6 +32,7 @@ body {
   display: inline-block;
 }
 
+/* steelblue is #4682b4 */
 .blue-button {
   display: block;
   text-align: center;
@@ -39,12 +40,12 @@ body {
   cursor: pointer;
   border-radius: 6px;
   border-style: outset;
-  border-width: 3px;
-  border-left-color: rgb(27, 76, 159);
-  border-top-color: rgb(27, 76, 159);
-  border-right-color: rgb(11, 31, 64);
-  border-bottom-color: rgb(11, 31, 64);
-  background-color: rgb(24, 70, 148);
+  border-width: 2px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: #4697da; 
+  border-bottom-color: #4697da;
+  background-color: #2e6798;
   color: rgb(251, 251, 252);
   user-select: none;
   text-decoration: none;
@@ -52,9 +53,7 @@ body {
 
 .blue-button:hover,
 .blue-button:focus {
-  background-color: rgb(46, 151, 237);
-  border-left-color: rgb(46, 151, 237);
-  border-top-color: rgb(46, 151, 237);
+  background-color: #4697da;
 }
 
 .blue-button:active {
