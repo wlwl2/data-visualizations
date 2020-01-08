@@ -1,4 +1,4 @@
-var regions = [
+var prefectures = [
 	{
 		"name": "Hiroshima",
 		"path": "M160.2,510.6 L161.3,510.8 L160.8,512.8 L156.5,511.8 L158.8,510.0 L159.3,508.1 Z M168.6,508.7 L167.6,509.0 L165.8,507.9 L166.7,507.3 Z M175.5,504.7 L174.7,507.1 L172.6,507.6 L172.1,506.1 Z M151.0,504.2 L149.9,503.6 L151.3,501.9 L153.0,502.5 Z M148.7,506.4 L145.1,504.3 L142.8,498.1 L142.5,493.4 L142.3,491.7 L145.2,488.1 L147.0,484.5 L147.5,481.9 L151.3,479.1 L152.4,479.9 L158.1,478.9 L161.3,479.7 L167.5,477.9 L166.7,475.7 L167.9,474.1 L171.0,472.5 L174.9,468.0 L180.8,467.8 L183.0,468.8 L185.8,468.8 L189.7,469.4 L190.9,470.0 L192.3,472.5 L192.1,478.1 L193.7,482.1 L193.7,486.9 L194.3,490.7 L196.1,495.5 L195.7,497.1 L194.4,499.3 L191.4,502.6 L189.5,503.5 L190.1,501.1 L188.1,498.7 L187.2,501.0 L185.3,502.4 L185.9,504.9 L184.5,504.6 L181.6,506.2 L181.0,503.2 L182.3,502.0 L183.3,503.3 L184.8,501.4 L183.6,500.4 L181.5,500.2 L181.6,501.7 L178.9,502.8 L174.8,502.8 L172.5,503.9 L171.9,502.8 L169.0,504.4 L169.2,506.1 L166.5,506.3 L165.2,508.6 L163.1,506.3 L161.1,507.4 L159.1,502.8 L159.2,499.3 L157.0,499.7 L154.8,498.8 L152.0,500.4 L148.2,504.1 Z"
@@ -192,12 +192,12 @@ var regions = [
 var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
 svg.setAttribute('width', '645.80')
 svg.setAttribute('height', '700.40')
-for (var i = 0; i < regions.length; i++) {
+for (var i = 0; i < prefectures.length; i++) {
   var path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-  path.setAttribute('d', regions[i].path)
+  path.setAttribute('d', prefectures[i].path)
   path.setAttribute('stroke', 'black')
   path.setAttribute('fill', 'transparent')
-  path.setAttribute('data-english-name', regions[i].name)
+  path.setAttribute('data-english-name', prefectures[i].name)
   svg.appendChild(path)
 }
 document.querySelector('.japan-map .root').appendChild(svg)
